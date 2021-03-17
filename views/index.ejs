@@ -6,6 +6,9 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% for ( const message of messages ) { %>
+      <%= message.text %> by <%= message.user %> on <%= message.added.getFullYear() %>
+      <br>
+      <% } %>
   </body>
 </html>
