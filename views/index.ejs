@@ -7,8 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <% for ( const message of messages ) { %>
-      <%= message.text %> by <%= message.user %> on <%= message.added.getFullYear() %>
+      <%= message.text %> by <%= message.user %> on <%= message.added.getMonth() %>-<%= message.added.getDay() %>-<%= message.added.getFullYear() %>
+      <br>
       <br>
       <% } %>
+
+      <br>
+      <button><a href="/new" style="color: black; text-decoration: none;">New Message</a></button>
   </body>
 </html>
