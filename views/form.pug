@@ -1,4 +1,12 @@
 extends layout 
 
-block content
-  h1 HLSH
+block content 
+    header 
+        h1= 'Message Board'
+        p= 'speak your mind freely'
+    main
+        section.form-container 
+            form(method='POST' action='/new')
+                textarea(name='message' placeholder='Message' cols='30' )
+                input(type='text' placeholder='Username' name='user' id='username')
+                button(type='submit' id='submit-btn')= 'post'
