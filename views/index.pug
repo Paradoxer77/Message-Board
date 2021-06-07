@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{messages[1].user}
+  ul
+    each message in messages
+      div
+        p= message.text
+        p= message.user
+        p= message.date.getMonth() + "/" +message.date.getDate() + "/"+ message.date.getFullYear() 
